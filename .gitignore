@@ -1,0 +1,6 @@
+# 🔒 Sensitive Config Files
+.env
+.env.*
+
+# 📦 Dependency folders
+node_modules/
