@@ -19,7 +19,6 @@ A full-stack web application to browse doctors, book appointments, manage profil
 - Media: Cloudinary
 
 ## Repository Layout
-/
 - admin/      — Admin & Doctor React app  
 - frontend/   — Patient React app  
 - backend/    — Express API and database models  
