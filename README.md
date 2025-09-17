@@ -1,39 +1,68 @@
 # 🩺 Online Doctor Appointment System
 
-## 📖 Description
-This project is a full-featured online doctor appointment system where patients can easily book consultations, doctors can manage their appointments, and admins can control the whole platform. It’s designed to give a smooth user experience and showcase your full stack skills in one awesome package 💪
+A full-stack web application to browse doctors, book appointments, manage profiles, and process payments. The project includes separate React apps for patients and admins/doctors, and an Express + MongoDB backend.
 
-## 👥 User Roles
+## Key Features
+- Patient registration & JWT authentication
+- Doctor discovery by specialty, detailed profiles
+- Real-time appointment booking with slot management
+- Online payments via Stripe and Razorpay
+- Doctor dashboard to manage availability and profile
+- Admin dashboard for platform oversight
 
-### 🔹 Patient
-- Register/Login securely (JWT-based)
-- View available doctors and book appointments
-- Pay appointment fees online 💳
-- Manage and cancel appointments
+## Tech Stack
+- Frontend: React, React Router, Tailwind CSS, Axios
+- Backend: Node.js, Express
+- Database: MongoDB (Mongoose)
+- Auth: JWT, bcrypt
+- Payments: Stripe, Razorpay
+- Media: Cloudinary
 
-### 🔹 Doctor
-- Login to their dashboard
-- View upcoming appointments
-- Update profile and availability
-- Track earnings and activity
+## Repository Layout
+/
+- admin/      — Admin & Doctor React app  
+- frontend/   — Patient React app  
+- backend/    — Express API and database models  
 
-### 🔹 Admin
-- Admin login dashboard
-- Manage doctors and appointments
-- Monitor system activity
+## Prerequisites
+- Node.js (v14+)
+- npm or yarn
+- MongoDB (local or Atlas)
+- Git
 
-## 💻 Tech Stack
-- **Frontend:** React JS, React Router, Axios, Bootstrap/Tailwind  
-- **Backend:** Node.js, Express.js  
-- **Database:** MongoDB (Mongoose)  
-- **Authentication:** JWT, Bcrypt  
-- **Payments:** Stripe / Razorpay (can be switched easily)
+## How to run (locally)
+1. Clone:
+```bash
+   git clone https://github.com/mannatsingla22/Online-Doctor-Appointment-System
+```
+2. Backend:
+```bash
+   cd backend
+   npm install
+   # create a `.env` (see below)
+   npm run server
+```
+3. Frontend (patient):
+```bash
+   cd frontend
+   npm install
+   npm run dev
+```
+4. Admin/Doctor panel:
+```bash
+   cd admin
+   npm install
+   npm run dev
+```
 
-## 🚀 Key Highlights
-- 🔐 Three-Level Authentication System (Patient, Doctor, Admin)
-- 📆 Real-time Appointment Booking
-- 💰 Online Payment Integration
-- 📊 Admin Dashboard with Analytics
-- 🎯 Clean UI and Responsive Design
-- 💾 MongoDB for fast data storage and retrieval
-- ⚙️ Easily customizable & scalable
+## Environment Variables (backend/.env)
+- MONGO_URI=your_mongo_connection_string
+- JWT_SECRET=your_jwt_secret
+- CLOUDINARY_CLOUD_NAME=
+- CLOUDINARY_API_KEY=
+- CLOUDINARY_API_SECRET=
+- STRIPE_SECRET_KEY=
+- RAZORPAY_KEY_ID=
+- RAZORPAY_KEY_SECRET=
+- CURRENCY=USD
+- PORT=4000
